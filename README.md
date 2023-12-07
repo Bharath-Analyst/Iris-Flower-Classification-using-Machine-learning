@@ -13,7 +13,7 @@
 
 **Aim**
 
-The aim of this project is to develop a model that can classify iris flowers into different species based on their sepal and petal measurements.
+This project seeks to create a model capable of categorizing iris flowers into distinct species by analyzing their sepal and petal measurements.
 
 **Libraries Used**
 The following important libraries were used for this project:
@@ -33,28 +33,28 @@ The iris dataset was loaded using seaborn's load_dataset function, which contain
 
 **Data Exploration and Preprocessing**
 
-1)The dataset was loaded using seaborn's load_dataset function as a DataFrame, and its first 5 rows were displayed using df.head().
+1) The dataset was loaded into a DataFrame using seaborn's load_dataset function, and the initial five rows were showcased via df.head().
 
-2)The 'species' column in the DataFrame was encoded to numerical values using pd.factorize(df['species']).
+2) Numeric encoding was applied to the 'species' column of the DataFrame using pd.factorize(df['species']).
 
-3)Descriptive statistics for the dataset were displayed using df.describe().
+3) Descriptive statistics of the dataset were presented using df.describe().
 
-4)Missing values in the dataset were checked using df.isna().sum().
+4) Examination of missing values in the dataset was performed through df.isna().sum().
 
 **Data Visualization**
 
-1)3D scatter plots were created to visualize the relationship between species, petal length, and petal width, as well as between species, sepal length, and sepal width using matplotlib.pyplot and mpl_toolkits.mplot3d.Axes3D.
+1) Utilizing matplotlib.pyplot and mpl_toolkits.mplot3d.Axes3D, 3D scatter plots were generated to illustrate the connections among species, petal length, and petal width, as well as among species, sepal length, and sepal width.
 
-2)2D scatter plots were created to visualize the relationship between species and sepal length, as well as between species and sepal width using seaborn.scatterplot.
+2) Seaborn.scatterplot was employed to craft 2D scatter plots, offering a visual depiction of the correlation between species and sepal length, as well as between species and sepal width.
 
 **Applying Elbow Technique for K-Means Clustering**
 
-1)The Elbow Technique was applied to determine the optimal number of clusters (K) using the sum of squared errors (SSE).
+1) The Elbow Technique was employed to ascertain the optimal number of clusters (K) by evaluating the sum of squared errors (SSE).
 
-2)The KMeans algorithm was initialized with different values of K (1 to 10) and SSE was computed for each K value.
+2) The KMeans algorithm was initiated with varying values of K (ranging from 1 to 10), and SSE was calculated for each K value.
 
-3)A plot of K values against SSE was created using matplotlib.pyplot to identify the "elbow point," which indicates the optimal number of clusters.
-
+3) A matplotlib.pyplot plot illustrating the relationship between K values and SSE was generated to pinpoint the "elbow point," signifying the optimal number of clusters.
+   
 **Applying K-Means Algorithm**
 
 1)The KMeans algorithm was applied to the dataset with the optimal number of clusters (K=3) obtained from the Elbow Technique.
@@ -63,6 +63,6 @@ The iris dataset was loaded using seaborn's load_dataset function, which contain
 
 **Accuracy Measure**
 
-1)The confusion matrix was calculated to evaluate the accuracy of the KMeans clustering.
+1) The accuracy of the KMeans clustering was assessed by computing the confusion matrix.
 
-2)The confusion matrix was plotted using matplotlib.pyplot.imshow and plt.text to visualize the true and predicted labels.
+2) The confusion matrix was visually represented by creating a plot using matplotlib.pyplot.imshow and plt.text, illustrating the true and predicted labels.
